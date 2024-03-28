@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Registraion</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  </head>
+  <body>
+    <form action="#" class="form">
+      <h1 class="text-center">Registration</h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+
+        <div
+          class="progress-step progress-step-active"
+          data-title="Parent Detail"
+        ></div>
+        <div class="progress-step" data-title="Child Deatail"></div>
+        <div class="progress-step" data-title="Subject"></div>
+        <div class="progress-step" data-title="Payment"></div>
+      </div>
+
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="parentName">Parent Name</label>
+          <input type="text" name="parentName" id="parentName" />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="">
+          <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="childName">Child Name</label>
+          <input type="text" name="childName" id="childName" />
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="subjects">Subjects</label>
+          <select name="subjects" id="subjects">
+            <option value="math" data-price="40">Math</option>
+            <option value="science" data-price="30">Science</option>
+            <option value="history" data-price="20">History</option>
+            <optgroup label="Literature">
+              <option value="poetry" data-price="15">Poetry</option>
+              <option value="fiction" data-price="25">Fiction</option>
+              <option value="drama" data-price="35">Drama</option>
+              <option value="prose" data-price="20">Prose</option>
+            </optgroup>
+          </select>
+          <p>Total Price: <span id="total-price">0</span>$</p>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <p id="qr-message">Scan the QR code to make the payment.</p>
+        <div class="qr-code-container">
+          <canvas id="qr-code"></canvas>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+    </form>
+    <script src="Payment.js"></script>
+  </body>
+</html>
